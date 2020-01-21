@@ -1,1 +1,1 @@
-export const init = 'Hello world';
+export { immutable } from './immutable';
