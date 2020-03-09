@@ -31,8 +31,8 @@ export function immutable(db: Dexie) {
         db.Table.prototype.bulkAdd,
         (origFunc: Dexie.Table<any, any>['bulkAdd']) =>
 
-            function (this: any, item, key?) {
-                const itemState = cloneDeep(item);
+            function (this: any, items: Parameters<typeof origFunc>[0], key?: Parameters<typeof origFunc>[1]) {
+                const itemState = cloneDeep(items);
                 const keyState = cloneDeep(key);
                 return origFunc.call(this, itemState, keyState);
             } as typeof origFunc
@@ -42,8 +42,8 @@ export function immutable(db: Dexie) {
         db.Table.prototype.put,
         (origFunc: Dexie.Table<any, any>['put']) =>
 
-            function (this: any, item, key?) {
-                const itemState = cloneDeep(item);
+            function (this: any, items, key?) {
+                const itemState = cloneDeep(items);
                 const keyState = cloneDeep(key);
                 return origFunc.call(this, itemState, keyState);
             } as typeof origFunc
@@ -53,8 +53,8 @@ export function immutable(db: Dexie) {
         db.Table.prototype.bulkPut,
         (origFunc: Dexie.Table<any, any>['bulkPut']) =>
 
-            function (this: any, item, key?) {
-                const itemState = cloneDeep(item);
+            function (this: any, items: Parameters<typeof origFunc>[0], key?: Parameters<typeof origFunc>[1]) {
+                const itemState = cloneDeep(items);
                 const keyState = cloneDeep(key);
                 return origFunc.call(this, itemState, keyState);
             } as typeof origFunc
@@ -64,9 +64,9 @@ export function immutable(db: Dexie) {
         db.Table.prototype.update,
         (origFunc: Dexie.Table<any, any>['update']) =>
 
-            function (this: any, key, item) {
+            function (this: any, key, changes) {
                 const keyState = cloneDeep(key);
-                const itemState = cloneDeep(item);
+                const itemState = cloneDeep(changes);
                 return origFunc.call(this, keyState, itemState);
             } as typeof origFunc
     );
