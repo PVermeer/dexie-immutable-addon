@@ -43,7 +43,6 @@
     }
   },
   "dependencies": {
-    "dts-bundle-generator": "^3.3.1",
     "lodash": "^4.17.15"
   },
   "devDependencies": {
@@ -62,6 +61,7 @@
     "@types/lodash": "^4.14.149",
     "@types/lodash-es": "^4.17.3",
     "dexie": "^3.0.0-rc.5",
+    "dts-bundle-generator": "^3.3.1",
     "faker": "^4.1.0",
     "git-branch-is": "^3.1.0",
     "husky": "^4.2.3",

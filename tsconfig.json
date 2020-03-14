@@ -2,27 +2,16 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "rootDirs": [
-      // Treat declaration files in ./types as they where in ./
-      // E.g.: declaration for config.js file 
-      "./",
-      "types"
-    ],
-    "paths": {
-      "dexie-observable": [
-        "src/types/dexie-observable"
-      ]
-    },
     "outDir": "./dist",
     "sourceMap": false,
     "declaration": false,
     "removeComments": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
-    "module": "ES2015",
+    "module": "ESNext",
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "ES5",
+    "target": "ES6",
     "typeRoots": [
       "node_modules/@types"
     ],
