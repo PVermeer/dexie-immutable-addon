@@ -1,3 +1,10 @@
+# [1.0.0-beta.3](https://github.com/PVermeer/dexie-immutable-addon/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2020-03-16)
+
+
+### Bug Fixes
+
+* declarations should now work again ([de18ade](https://github.com/PVermeer/dexie-immutable-addon/commit/de18adee16cf6f7ae68f0d9d2cafd9c6da25f989))
+
 # [1.0.0-beta.2](https://github.com/PVermeer/dexie-immutable-addon/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2020-03-09)
 
 
