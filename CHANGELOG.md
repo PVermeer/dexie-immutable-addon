@@ -1,3 +1,10 @@
+# [1.0.0-beta.4](https://github.com/PVermeer/dexie-immutable-addon/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2020-03-19)
+
+
+### Features
+
+* **readme:** added documentation ([7f7a694](https://github.com/PVermeer/dexie-immutable-addon/commit/7f7a6948711b3e5ff0ed62e8825aea0cf12e52d2))
+
 # [1.0.0-beta.3](https://github.com/PVermeer/dexie-immutable-addon/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2020-03-16)
 
 
