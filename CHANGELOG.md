@@ -1,3 +1,10 @@
+# [1.0.0-beta.5](https://github.com/PVermeer/dexie-immutable-addon/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2020-03-23)
+
+
+### Bug Fixes
+
+* **declarations:** added support for older TS versions ([7be2b28](https://github.com/PVermeer/dexie-immutable-addon/commit/7be2b284732d0f311e8b7ce850ade4555b88a2be))
+
 # [1.0.0-beta.4](https://github.com/PVermeer/dexie-immutable-addon/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2020-03-19)
 
 
