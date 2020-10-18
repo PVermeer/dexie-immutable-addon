@@ -1,6 +1,9 @@
 language: node_js
 os: linux
 
+services:
+  - docker
+
 branches:
   only:
     - master
@@ -20,12 +23,12 @@ jobs:
     - stage: test
       node_js: lts/*
       cache: npm
-      script: npm run test
+      script: npm run docker:test:ci
     - stage: release
       node_js: lts/*
       cache: npm
-      script: 
-        - npm run build
+      script:
+        - npm run docker:build:ci
       deploy:
         provider: script
         skip_cleanup: true
