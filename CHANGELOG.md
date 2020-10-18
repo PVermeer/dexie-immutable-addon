@@ -1,3 +1,10 @@
+# [1.0.0-beta.6](https://github.com/PVermeer/dexie-immutable-addon/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2020-10-18)
+
+
+### Bug Fixes
+
+* **ci:** test docker config on ci ([b87a4cb](https://github.com/PVermeer/dexie-immutable-addon/commit/b87a4cb94f99f6c15e1cd65b029d9ca8b9c290dc))
+
 # [1.0.0-beta.5](https://github.com/PVermeer/dexie-immutable-addon/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2020-03-23)
 
 
