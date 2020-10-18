@@ -10,3 +10,6 @@ COPY package*.json ./
 COPY patches patches
 RUN npm ci --unsafe-perm=true
 COPY . .
+
+FROM install as build
+CMD npm run build

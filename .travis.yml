@@ -23,12 +23,12 @@ jobs:
     - stage: test
       node_js: lts/*
       cache: npm
-      script: npm run docker:test
+      script: npm run docker:test:ci
     - stage: release
       node_js: lts/*
       cache: npm
       script:
-        - npm run build
+        - npm run docker:build:ci
       deploy:
         provider: script
         skip_cleanup: true
