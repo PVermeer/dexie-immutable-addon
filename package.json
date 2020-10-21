@@ -63,8 +63,7 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "if git-branch-is -i -q -r \"master|next|next-major|beta|alpha|^v\\d+\\.\\d+(\\.\\d+)?(-\\S*)?$\"; then npm run docker:test; fi"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "dependencies": {
