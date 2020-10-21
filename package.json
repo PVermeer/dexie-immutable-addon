@@ -29,7 +29,7 @@
     "access": "public"
   },
   "scripts": {
-    "postinstall": "patch-package",
+    "prepare": "patch-package",
     "init": "semantic-release-cli setup",
     "docker:dev": "COMPOSE_DOCKER_CLI_BUILD=1 docker-compose -f deployments/docker/docker-compose.dev.yml -p dev up --build --abort-on-container-exit",
     "docker:dev:down": "COMPOSE_DOCKER_CLI_BUILD=1 docker-compose -f deployments/docker/docker-compose.dev.yml -p dev down",
