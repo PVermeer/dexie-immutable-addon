@@ -1,3 +1,10 @@
+# [1.0.0-beta.7](https://github.com/PVermeer/dexie-immutable-addon/compare/v1.0.0-beta.6...v1.0.0-beta.7) (2020-10-21)
+
+
+### Bug Fixes
+
+* **package:** patch-package now does not run on published package ([c1449cb](https://github.com/PVermeer/dexie-immutable-addon/commit/c1449cb419cc683758558dd28aec34ba2cb6fce4))
+
 # [1.0.0-beta.6](https://github.com/PVermeer/dexie-immutable-addon/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2020-10-18)
 
 
