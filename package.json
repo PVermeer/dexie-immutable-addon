@@ -37,8 +37,6 @@
     "docker:dev:karma": "COMPOSE_DOCKER_CLI_BUILD=1 docker-compose -f deployments/docker/docker-compose.dev.yml -p dev-karma build && docker-compose -f deployments/docker/docker-compose.dev.yml -p dev-karma run -p 9339:9229 test-karma; docker-compose -f deployments/docker/docker-compose.dev.yml -p dev-karma down",
     "docker:test": "COMPOSE_DOCKER_CLI_BUILD=1 docker-compose -f deployments/docker/docker-compose.test.yml -p test build && docker-compose -f deployments/docker/docker-compose.test.yml -p test run test; docker-compose -f deployments/docker/docker-compose.test.yml -p test down",
     "docker:test:ci": "COMPOSE_DOCKER_CLI_BUILD=1 docker-compose -f deployments/docker/docker-compose.test.yml -p test build && docker-compose -f deployments/docker/docker-compose.test.yml -p test run test",
-    "docker:test:karma": "COMPOSE_DOCKER_CLI_BUILD=1 docker-compose -f deployments/docker/docker-compose.test.karma.yml -p test-karma up --build --abort-on-container-exit",
-    "docker:test:jasmine": "COMPOSE_DOCKER_CLI_BUILD=1 docker-compose -f deployments/docker/docker-compose.test.jasmine.yml -p test-jasmine up --build --abort-on-container-exit",
     "docker:build": "COMPOSE_DOCKER_CLI_BUILD=1 docker-compose -f deployments/docker/docker-compose.yml -p build build && docker-compose -f deployments/docker/docker-compose.yml -p build run build; docker-compose -f deployments/docker/docker-compose.test.yml -p build down",
     "docker:build:ci": "COMPOSE_DOCKER_CLI_BUILD=1 docker-compose -f deployments/docker/docker-compose.yml -p build build && docker-compose -f deployments/docker/docker-compose.yml -p build run build",
     "build": "npm run clean && npm run build:bundles && npm run build:es6 && npm run build:esm-es5 && npm run build:declaration && npm run build:dl-dts",
@@ -63,12 +61,11 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "if git-branch-is -i -q -r \"master|next|next-major|beta|alpha|^v\\d+\\.\\d+(\\.\\d+)?(-\\S*)?$\"; then npm run docker:test; fi"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "dependencies": {
-    "lodash": "^4.17.20",
+    "lodash.clonedeep": "^4.5.0",
     "tslib": "^1.14.1"
   },
   "devDependencies": {
@@ -85,8 +82,7 @@
     "@types/is-ci": "^2.0.0",
     "@types/jasmine": "^3.5.14",
     "@types/karma": "^3.0.9",
-    "@types/lodash": "^4.14.162",
-    "@types/lodash-es": "^4.17.3",
+    "@types/lodash.clonedeep": "^4.5.6",
     "babel-loader": "^8.1.0",
     "cross-env": "^7.0.2",
     "dexie": "^3.0.0",
@@ -108,13 +104,12 @@
     "karma-chrome-launcher": "^3.1.0",
     "karma-coverage-istanbul-reporter": "^2.1.1",
     "karma-edgium-launcher": "^4.0.0-0",
-    "karma-firefox-launcher": "^1.3.0",
+    "karma-firefox-launcher": "^2.0.0",
     "karma-jasmine": "^2.0.1",
     "karma-jasmine-html-reporter": "^1.5.4",
     "karma-mocha-reporter": "^2.2.5",
     "karma-webpack": "^4.0.2",
     "license-webpack-plugin": "^2.3.0",
-    "lodash-es": "^4.17.15",
     "nodemon": "^2.0.4",
     "patch-package": "^6.2.2",
     "rimraf": "^3.0.2",
