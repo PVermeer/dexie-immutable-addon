@@ -1,6 +1,6 @@
 // tslint:disable: space-before-function-paren // Conflict with default formatter vscode
 import Dexie from 'dexie';
-import { cloneDeep } from 'lodash';
+import cloneDeep from 'lodash.clonedeep';
 
 type DexieExtended = Dexie & {
     pVermeerAddonsRegistered?: { [addon: string]: boolean }
