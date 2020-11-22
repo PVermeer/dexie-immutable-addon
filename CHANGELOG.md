@@ -1,3 +1,10 @@
+# [1.0.0-beta.8](https://github.com/PVermeer/dexie-immutable-addon/compare/v1.0.0-beta.7...v1.0.0-beta.8) (2020-11-21)
+
+
+### Bug Fixes
+
+* **build:** do not require full lodash as a dependency ([be61bcc](https://github.com/PVermeer/dexie-immutable-addon/commit/be61bccc6f95d9c7579b637a47a4bd53d93395df))
+
 # [1.0.0-beta.7](https://github.com/PVermeer/dexie-immutable-addon/compare/v1.0.0-beta.6...v1.0.0-beta.7) (2020-10-21)
 
 
